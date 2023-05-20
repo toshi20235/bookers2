@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/c2d68e5f1e.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,7 +14,7 @@
    <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-       <%= link_to homes_top_path,class: "navbar-brand" do %>
+       <%= link_to root_path,class: "navbar-brand" do %>
         <span>Bookers</span>
        <% end %>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls"navbarNavDropdown" aria-expand="false" aria-label="Toggle navigation">
@@ -22,14 +22,17 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarNavDropdown">
          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <%= link_to "Home", homes_top_path, class: "nav-link text-light" %>
+            <li class="nav-item-top">
+              <%= link_to "Home", root_path, class: "nav-link text-light" %>
             </li>
-            <li class="nav-item">
-              <%= link_to"Sing up", new_user_session_path, class: "nav-link text-light" %>
+              <li class="nav-item-about">
+               <%= link_to "About",  homes_about_path, class: "nav-link text-light" %>
             </li>
-             <li class="nav-item">
-              <%= link_to "Log in", new_user_registration_path, class: "nav-link text-light" %>
+            <li class="nav-item-sing">
+              <%= link_to "Sing up", new_user_registration_path, class: "nav-link text-light" %>
+            </li>
+             <li class="nav-item-log">
+              <%= link_to"Log ", new_user_session_path, class: "nav-link text-light" %>
             </li>
          </ul>
         </div>
