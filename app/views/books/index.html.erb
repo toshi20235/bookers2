@@ -18,7 +18,7 @@
        <% @books.each do |book| %>
        <tr>
         <td><%= image_tag @user.get_profile_image(100,100) %></td>
-        <td><%=link_to book.title ,user_path(id: current_user) %></td>
+        <td><%=link_to book.title ,book_path(id: current_user) %></td>
         <td><%= book.opinion %></td>
        </tr>
        <% end %>
