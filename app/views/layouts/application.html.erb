@@ -22,6 +22,9 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarNavDropdown">
          <ul class="navbar-nav ml-auto">
+            <li>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
             <li class="nav-item-top">
               <%= link_to "Home", root_path, class: "nav-link text-light" %>
             </li>
@@ -29,11 +32,12 @@
                <%= link_to "About",  homes_about_path, class: "nav-link text-light" %>
             </li>
             <li class="nav-item-sing">
-              <%= link_to "Sing up", new_user_registration_path, class: "nav-link text-light" %>
+               <%= link_to "Sing up", new_user_registration_path, class: "nav-link text-light" %>
             </li>
              <li class="nav-item-log">
-              <%= link_to"Log ", new_user_session_path, class: "nav-link text-light" %>
+               <%= link_to"Log in", new_user_session_path, class: "nav-link text-light" %>
             </li>
+           
          </ul>
         </div>
        </div>
