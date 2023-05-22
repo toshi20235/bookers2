@@ -12,6 +12,10 @@ class UsersController < ApplicationController
     @user= User.find(params[:id])
     @user.update(user_params)
     redirect_to user_path
+    user = User.new
+    user.save
+    flash[:notice] = "You have updated user successfully."
+    
   end
   
   private
