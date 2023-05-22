@@ -10,12 +10,14 @@
        <tbody>
         <% @books.each do |book| %>
          <tr>
-          <td><%= image_tag @user.get_profile_image(100,100) %>  <%=link_to @user.name, user_path(id: current_user) %></td>
+          <td><%= image_tag @user.get_profile_image(100,100) %> 
+            </br> <%=link_to @user.name, user_path(id: current_user) %>
+          </td>
           <td><%=link_to book.title ,user_path(id: current_user) %></td>
           <td><%= book.opinion %></td>
-          <td><%= link_to "edit", edit_book_path,class: 'btn btn-sm btn-succress' %></td>
+          <td><%= link_to "edit", edit_book_path,class: "btn btn-sm btn-success" %></td>
           <td> <% if @user == current_user %>
-               <%= link_to "destroy", books_path(@book), method: :delete,class: 'btn btn-sm-danger' %>
+               <%= link_to "destroy", books_path(@book), method: :delete,class: "btn btn-sm btn-danger" %>
                <% end %>
          </td>
          </tr>
